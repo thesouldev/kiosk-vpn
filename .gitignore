@@ -1,0 +1,47 @@
+# Environment variables
+.env
+
+# Client configurations (sensitive)
+client-configs/
+
+# Generated whitelist (generated from whitelist.json)
+server/config/whitelist.txt
+
+# Temporary files
+*.tmp
+*.temp
+
+# WireGuard keys and configs (local development)
+*.key
+wg0.conf
+# But allow the config template in server/config/
+
+# Config files in root (not the template configs in server/config/)
+/*.conf
+squid.conf
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Secrets and sensitive data
+secrets/
+credentials/
+*.pem
+*.crt

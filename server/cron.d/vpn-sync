@@ -1,0 +1,2 @@
+# Sync VPN configs from Secret Manager every 5 minutes
+*/5 * * * * root /usr/local/bin/sync-configs.sh >> /var/log/vpn-sync.log 2>&1

@@ -1,0 +1,11 @@
+[Unit]
+Description=VPN Health Check Server
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/health-server.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

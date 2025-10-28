@@ -16,12 +16,13 @@ MACHINE_TYPE="${MACHINE_TYPE:-e2-medium}"
 BOOT_DISK_SIZE="${BOOT_DISK_SIZE:-10}"
 REGION="${ZONE%-*}"
 
+# TODO: Enable this after testing
 # STARTUP_SCRIPT='#!/bin/bash
-# cd /opt && git clone https://github.com/thesouldev/smart-vpn.git 2>/dev/null || true
-# cd /opt/smart-vpn/server && bash startup.sh'
+# cd /opt && git clone https://github.com/thesouldev/kiosk-vpn.git 2>/dev/null || true
+# cd /opt/kiosk-vpn/server && bash startup.sh'
 
 STARTUP_SCRIPT='#!/bin/bash
-cd /opt && git clone https://github.com/thesouldev/smart-vpn.git 2>/dev/null || true'
+cd /opt && git clone https://github.com/thesouldev/kiosk-vpn.git 2>/dev/null || true'
 
 gcloud compute instance-templates create "$TEMPLATE_NAME" \
     --project="$PROJECT_ID" \
